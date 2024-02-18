@@ -1,0 +1,6 @@
+Presionamos f2 y tecleamos Spring initializer
+SpringBoot dedv tools tiene una herramienta de hot reload
+Lombok nos ayuda a reducir codigo como getters o setters
+Thymeleaf permite agregar paginas web
+En la carpeta main del proyecto Spring hay una carpeta llamada statics, donde irá codigo javaScript, codigo Css o otro tipo de contenido
+En aplication.properties se puede cambiar el puerto del servidor, que posiblemente pueda estar ocupado
