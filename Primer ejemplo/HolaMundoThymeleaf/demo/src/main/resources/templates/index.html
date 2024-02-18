@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+    <!--el atributo xmlns:th="http://www.thymeleaf.org" es el que nos permite utilizar las funcionalidades de Thymeleaf-->
+    <head>
+        <title>Primer Ejemplo Thymeleaf</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>
+            Hola Mundo Thymeleaf
+        </h1>
+        <p th:text="${mensaje}">Mensaje</p>
+            <!--el atributo th:text="${mensaje}" 
+            es el que nos permite mostrar el mensaje que se encuentra en el controlador que declaramos en el controlador Rest-->
+        <p th:text="${mensaje2}">Mensaje</p>
+    </body>
+</html>
