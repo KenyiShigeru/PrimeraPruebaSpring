@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 
 
 import lombok.extern.slf4j.Slf4j;
+import prueba.thymeleaf.domain.Individuo;
 
 @Controller
 @Slf4j //Esta anotacion es para poder usar el log de lombok en la clase
@@ -18,12 +19,22 @@ public class ControladorREST {
     @GetMapping("/")//Este metodo se ejecuta cuando se accede a la raiz del proyecto como en nodejs con app.get('/')
     public String Comienzo(Model Modelo) {
         String hola = "Hola Mundo con Spring Boot y Thymeleaf";
+
+        Individuo individuo = new Individuo();
+        individuo.setNombre("Kenyi");
+        individuo.setApellido("Creano");
+        individuo.setEmail("ejemplo@ejemplo.com");
+        individuo.setEdad("22 años");
+        individuo.setTelefono("123456789");
+
+
         log.info("Ejecutando un controlador MVC");//Este es un mensaje de log de lombok
         //Ese log se vera en la consola de la aplicacion como lo hace nodejs con console.log
 
         Modelo.addAttribute("mensaje", hola);//Este es un atributo que se le pasa a la vista
+        Modelo.addAttribute("mensaje2", mensaje);
+        Modelo.addAttribute("individuo", individuo);//Este es un atributo que se le pasa a la vista con un objeto
 
-        Modelo.addAttribute("mensaje2", mensaje);//Este es un atributo que se le pasa a la vista
         return "index";//Este metodo retorna el nombre de la vista que se va a mostrar
     };//Este metodo escrito con una lambda seria () -> "Mi primer proyecto con Spring Boot"
 

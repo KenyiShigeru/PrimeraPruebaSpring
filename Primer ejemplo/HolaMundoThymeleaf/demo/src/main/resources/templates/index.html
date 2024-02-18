@@ -13,5 +13,15 @@
             <!--el atributo th:text="${mensaje}" 
             es el que nos permite mostrar el mensaje que se encuentra en el controlador que declaramos en el controlador Rest-->
         <p th:text="${mensaje2}">Mensaje</p>
+        <br/>
+        Nombre: <span th:text="${individuo.nombre}">Nombre</span>
+        <br/>
+        Apellido: <span th:text="${individuo.apellido}">Apellido</span>
+        <br/>
+        Edad: <span th:text="${individuo.edad}">Edad</span>
+        <br/>
+        Correo: <span th:text="${individuo.email}">Correo</span>
+        <br/>
+        Telefono: <span th:text="${individuo.telefono}">Telefono</span>  
     </body>
 </html>
